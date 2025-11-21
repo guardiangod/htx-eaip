@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+pydantic
+SQLAlchemy
+alembic
+python-multipart
+opencv-python
+numpy
+sentence-transformers
+torch
+transformers
+soundfile
+librosa
+scikit-learn
+openpyxl
+python-dotenv
