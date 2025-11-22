@@ -12,11 +12,19 @@ from .queue import job_queue, Job
 from .processing.video import process_video_file, get_embedding_model as get_text_emb_model
 from .processing.audio import process_audio_file
 from .search import search_by_vector, build_search_result
+from fastapi.staticfiles import StaticFiles
 from .config import MEDIA_DIR
 
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="HTX Media Processing API")
+
+# Serve key frames and other media files
+app.mount(
+    "/media",
+    StaticFiles(directory=str(MEDIA_DIR)),
+    name="media",
+)
 
 app.add_middleware(
     CORSMiddleware,

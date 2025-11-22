@@ -31,7 +31,7 @@ const VideoList: React.FC<Props> = ({ videos }) => {
             {v.frames.map(f => (
               <div key={f.id} style={{ border: "1px solid #eee", padding: 4 }}>
                 <img
-                  src={`http://localhost:8000/static/${encodeURIComponent(
+                  src={`http://localhost:8000/media/${encodeURIComponent(
                     f.image_path.split("/").slice(-1)[0]
                   )}`}
                   alt="frame"
