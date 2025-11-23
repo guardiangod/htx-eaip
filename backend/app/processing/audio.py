@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 from sqlalchemy.orm import Session
 from transformers import WhisperProcessor, WhisperForConditionalGeneration
-
+import torch
 from ..config import WHISPER_MODEL_NAME, MEDIA_DIR, AUDIO_CHUNK_SECONDS, EMBEDDING_MODEL_NAME
 from ..models import AudioTranscription, AudioSegment, Embedding
 from sentence_transformers import SentenceTransformer
