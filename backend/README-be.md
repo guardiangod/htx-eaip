@@ -2,11 +2,17 @@
 
 ## Setup
 
+### Python Version Requirement
+The backend requires **Python 3.10 – 3.13**.
+
+> Python 3.14 is *not supported* because PyTorch and Whisper do not yet provide wheels for that version.  
+Please install Python 3.11 before setting up the backend environment.
+
 ```bash
 cd backend
-python -m venv venv
+python3.11 -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
-pip install -r requirements.txt
+pip3.11 install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
