@@ -1,4 +1,4 @@
-# HTX Enterprise AI Products – Full-stack Submission
+# Enterprise AI Products – Media Processing AI
 
 This repository contains:
 
